@@ -6,17 +6,24 @@ function ChefBody() {
     const ingre = ingredients.map((items) => {
         return <li key={items} >{items}</li>
     });
-    function handleSubmit(event) {
-        event.preventDefault();
-        const formData = new FormData(event.currentTarget)
-        const newIngredient = formData.get("ingredients")
+    // function handleSubmit(event) {
+    //     event.preventDefault();
+    //     const formData = new FormData(event.currentTarget)
+    //     const newIngredient = formData.get("ingredients")
+    //     setIngredients((prev) => {
+    //         return [...prev, newIngredient]
+    //     })
+    // }
+
+    function submitAction(formData) {
+        const newIngredient = formData.get("ingredients");
         setIngredients((prev) => {
             return [...prev, newIngredient]
         })
     }
     return (
         <main>
-            <form onSubmit={handleSubmit} className="input-field">
+            <form action={submitAction} className="input-field">
                 <input type="text" placeholder="e.g. oregano" name="ingredients" />
                 <button>+ Add ingredient</button>
             </form>
