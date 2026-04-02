@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    background-color: #f55a5a;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    /* display: none; */
+}
+
+header>img {
+    width: 24px;
+    margin-right: 7px;
+}
+
+header>h1 {
+    font-size: 0.9rem;
+    font-weight: 500;
+
+}
+
+.container {
+    margin: 45px 40px;
+    /* display: none; */
+}
+
+section.journal-entry {
+    display: flex;
+    margin-bottom: 36px;
+}
+
+section.journal-entry .marker {
+    width: 7px;
+    margin-right: 4px;
+}
+
+section.journal-entry .main-image-container {
+    width: 125px;
+    height: 168px;
+    overflow: hidden;
+    border-radius: 5px;
+    flex-shrink: 0;
+    margin-right: 19px;
+}
+
+
+section.journal-entry .main-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.info-container span.country {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    margin-right: 12px;
+}
+
+.info-container a {
+    color: #2B283A;
+    font-size: 0.7rem;
+}
+
+.info-container a:visited {
+    color: #918E9B;
+}
+
+.info-container h2.entry-title {
+    margin-top: 7px;
+    margin-bottom: 17px;
+}
+
+.info-container p.trip-dates {
+    font-weight: bold;
+}
+
+.info-container p.entry-text {
+    line-height: 1.5;
+    font-size: 0.8rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+
+.contacts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.contact-card {
+    flex-basis: 225px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 13px;
+    padding-bottom: 20px;
+    background-color: white;
+}
+
+.contact-card>img {
+    width: 100%;
+    height: auto;
+    align-self: center;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.contact-card>h3 {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.info-group {
+    display: flex;
+    align-items: center;
+}
+
+.info-group>img {
+    height: 11px;
+    margin-right: 8px;
+}
+
+.info-group>p {
+    margin-block: 3px;
+    font-size: 12px;
+    color: #2B283A;
+}
+
+
+.jokes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.joke-container {
+    border: 2px solid black;
+}
+
+.joke-card {
+    flex-basis: 225px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 13px;
+    padding-bottom: 20px;
+    background-color: white;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h1 {
+    text-align: center;
+    /* margin-bottom: 20px; */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    border: 1px solid black;
+    width: 600px;
+    height: 111px;
+    margin-top: 50px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+}
+
+nav>h1 {
+    font-family: "Inter", sans-serif;
+    font-size: 32px;
+    line-height: 60px;
+    letter-spacing: -5%;
+    font-weight: 400;
+}
+
+main {
+    border: 1px solid black;
+    height: 180px;
+    background: #FAFAF8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: none;
+}
+
+form.input-field {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 10px; */
+}
+
+form.input-field>input {
+    width: 65%;
+    height: 20px;
+    background-color: white;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    padding: 9px 13px;
+    outline: none;
+    font-size: 18px;
+    /* flex-grow: 1; */
+}
+
+form.input-field>button {
+    background-color: black;
+    color: white;
+    padding: 9px 17px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    /* font-size: 14px; */
+    /* font-weight: 500; */
+}
+
+main>ul {
+    margin-top: 20px;
+    margin-left: 70px;
+    align-self: flex-start;
+}
+
+main.niam {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main.niam>.title {
+    text-align: center;
+}
+
+main.niam>.value {
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #262626;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
