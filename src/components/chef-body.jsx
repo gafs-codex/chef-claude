@@ -4,7 +4,7 @@ import React, { useState } from "react";
 function ChefBody() {
     const [ingredients, setIngredients] = useState([]);
     const ingre = ingredients.map((items) => {
-        return <li key={items} >{items}</li>
+        return <li className="list" key={items} >{items}</li>
     });
     // function handleSubmit(event) {
     //     event.preventDefault();
@@ -27,9 +27,21 @@ function ChefBody() {
                 <input type="text" placeholder="e.g. oregano" name="ingredients" />
                 <button>+ Add ingredient</button>
             </form>
-            <ul>
-                {ingre}
-            </ul>
+            {ingredients.length > 0 && <section className="sec">
+                <div className="list-container">
+                    <h2>Ingredients on hand:</h2>
+                    <ul>
+                        {ingre}
+                    </ul>
+                    <div className="get-recipe-container">
+                        <div>
+                            <h3>Ready for a recipe?</h3>
+                            <p>Generate a recipe from your list of ingredients.</p>
+                        </div>
+                        <button>Get a recipe</button>
+                    </div>
+                </div>
+            </section>}
         </main>
     )
 }
