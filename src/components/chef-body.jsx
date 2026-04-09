@@ -2,6 +2,7 @@
 import { useState } from "react";
 import ClaudeRecipe from "./claudeRecipe";
 import IngredientList from "./ingredientList";
+import { getRecipeFromMistral } from "../ai"
 
 function ChefBody() {
     const [ingredients, setIngredients] = useState([]);
@@ -28,15 +29,18 @@ function ChefBody() {
         })
     }
 
-    const [recipeShow, setRecipeShown] = useState(false)
+    const [recipeShow, setRecipeShown] = useState("")
 
-    function handleRecipeBtn() {
-        setRecipeShown((prev) => {
-            return !prev
-        })
-    }
+    // function handleRecipeBtn() {
+    //     setRecipeShown((prev) => {
+    //         return !prev
+    //     })
+    // }
     // console.log(recipeShow);
-
+    async function handleRecipeBtn() {
+        const recipe = await getRecipeFromMistral(ingredients)
+        setRecipeShown(recipe)
+    }
     return (
         <main>
             <form action={submitAction} className="input-field">
@@ -49,7 +53,7 @@ function ChefBody() {
                     ingredients={ingredients}
                 />}
 
-            {recipeShow && <ClaudeRecipe />}
+            {recipeShow && <ClaudeRecipe recipe={recipeShow} />}
         </main>
     )
 }

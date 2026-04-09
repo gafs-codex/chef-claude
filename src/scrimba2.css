@@ -6,7 +6,9 @@
 body {
     font-family: "Inter", sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
 }
 
 header {
@@ -247,12 +249,10 @@ main.niam>.value {
 
 .list-container {
     margin-top: 20px;
-    /* margin-left: 70px; */
-    /* border: 2px solid black; */
     align-self: flex-start;
     width: 90%;
-    max-height: 300px;
 }
+
 
 .get-recipe-container {
     width: 100%;
